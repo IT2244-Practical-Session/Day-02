@@ -1,0 +1,108 @@
+Open the putty software.
+Type the 172.16.140.150 as the IP address then click OK.
+When get the login as in terminal window enter the registration number(eg:2021/ict/09) then enter the Enter key.
+Enter the 789*asd as the password in terminal window.
+Then you can enter the linux commands in terminal window.
+
+touch abc.csv  //create an empty file named abc.csv
+
+vi abc.csv //used to edit the abc.csv file
+
+//after entering vi command press the "i" key.
+//then can enter data in terminal window(can use commas,tab to separate data from each)
+//after entering all data press ctrl+c then :wq! (to exit editing)
+
+more abc.csv  //display file content
+
+less abc.csv //display file content allowing scrolling
+
+wc -l abc.csv //gives the number of rows(lines) in the abc.csv file
+
+head -3 abc.csv  //display the first 3 lines(rows) in the file
+
+tail -2 abc.csv //display the last 2 rows in the file
+
+cut -f 1,3 abc.csv  //extract the 1st and 3rd column from the abc.csv
+
+cut -d ',' -f 1,3 abc.csv //if the comma used as delimeter extract the 1st and 3rd column
+
+cut -d ',' -f 1,2 abc.csv > abc1.csv //extract the 1st and 2nd column and save it into new file named abc1.csv
+
+more abc1.csv //to display 1st and 2nd column that extracted in abc.csv
+
+ls -a  //list all the files including hidden files also
+
+ls -ltr  //list the files in the current directory
+
+find *.csv //gives the all files with .csv extension 
+
+find *c* //gives the all files that contain c in file name
+
+//set the permission
+
+Permissions Breakdown for chmod 777 abc.csv
+Access Group	Binary Octal	Permission	Meaning
+Owner	         111	7	 rwx	Read, Write, Execute
+Group	         111	7	 rwx	Read, Write, Execute
+Others	         111	7	 rwx	Read, Write, Execute
+
+chmod 777 abc.csv
+
+exit //exit from the terminal window
+
+
+Output code:
+{ ~ }  » touch abc.csv
+{ ~ }  » vi abc.csv
+{ ~ }  » vi abc.csv
+{ ~ }  » chmod 777 abc.csv
+{ ~ }  » ./abc.csv
+56,78,89
+67,89,34
+56,12,89
+78,56,22
+70,30,25
+55,11,33
+89,99,77
+45,55,67
+{ ~ }  » more abc.csv
+56,78,89
+67,89,34
+56,12,89
+78,56,22
+70,30,25
+55,11,33
+89,99,77
+45,55,67
+{ ~ }  » less abc.csv
+56,78,89
+67,89,34
+56,12,89
+78,56,22
+70,30,25
+55,11,33
+89,99,77
+45,55,67
+{ ~ }  » wc -1 abc.csv 8 abc.csv
+{ ~ }  » head -3 abc.csv
+56,78,89
+67,89,34
+56,12,89
+{ ~ }  » tail -2 abc.csv
+89,99,77
+45,55,67
+{ ~ }  » cut -d ',' -f 1,3 abc.csv
+56,89
+67,34
+56,89
+78,22
+70,25
+55,33
+89,77
+45,67
+{ ~ }  » ls -a
+.              .bash_profile  .marks.sh.un~  .vim                     .zsh-update  marks.sh
+..             .bashrc        .minttyrc      .viminfo                 abc.csv      marks.sh~
+.abc.csv.un~   .gitconfig     .oh-my-zsh     .zcompdump               abc.csv~
+.babunrc       .inputrc       .pact          .zcompdump-DINUKA-5.0.6  bin
+.bash_history  .local         .profile       .zshrc                   i
